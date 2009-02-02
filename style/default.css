@@ -1,0 +1,130 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console"
+    , "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono"
+    , "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier
+    , monospace;
+    font-size: 14px;
+    color: #333333;
+    height: 100%;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    background: #888888;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: -15px;
+}
+
+h2 {
+    font-size: 1.45em;
+    margin-bottom: -15px;
+}
+h3 {
+    font-size: 1.15em;
+    margin-bottom: -15px;
+}
+h4 {
+    font-size: 1em;
+    margin-bottom: -15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #2e6B2e;
+    font-weight: bold;
+}
+
+a:hover, a:active {
+    color: #2e6B2e;
+    font-weight: bold;
+    border-bottom: dotted 1px #2e6B2e;
+}
+
+a img {
+    border: 0;
+    text-decoration: none;
+}
+
+acronym {
+    border-bottom: 1px dotted #2e6B2e;
+}
+
+address {
+    font-style: normal;
+}
+
+cite {
+    font-style: normal;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+#container {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#header {
+    background: #000000;
+    border-right: solid 3px #9a9a9a;
+    border-bottom: solid 3px #9a9a9a;
+    margin: 15px auto 9px auto;
+    padding: 0 8px;
+    width: 750px;
+    text-align: center;
+}
+
+#content {
+    background: #d7f5d7;
+    border-right: solid 3px #2e6b2e;
+    margin: 0 auto;
+    padding: 3px 8px;
+    width: 750px;
+}
+
+#footer {
+    background: #d7f5d7;
+    border-right: solid 3px #2e6b2e;
+    border-bottom: solid 3px #2e6b2e;
+    margin: 0 auto;
+    padding: 3px 8px;
+    width: 750px;
+}
+
+#bottomFixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    width: 100%;
+    text-align: right;
+}
+
+/*#bottomFixed > div {
+    position: relative;
+    margin-left: 100px;
+}*/
+
+.blue {
+    color: #6484e0;
+}
+
+.darkGreen {
+    color: #2e6B2e;
+}
+
+.hideTitle, a.skip {
+    display: none;
+}
