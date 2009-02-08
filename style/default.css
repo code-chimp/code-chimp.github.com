@@ -18,21 +18,31 @@ body {
 }
 
 h1 {
+    color: #000000;
     font-size: 2em;
-    margin-bottom: -15px;
+    margin-top: 0;
+    margin-bottom: -8px;
 }
 
 h2 {
-    font-size: 1.45em;
-    margin-bottom: -15px;
+    color: #000000;
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: -8px;
 }
+
 h3 {
-    font-size: 1.15em;
-    margin-bottom: -15px;
+    color: #000000;
+    font-size: 1.2em;
+    margin-top: 0;
+    margin-bottom: -8px;
 }
+
 h4 {
-    font-size: 1em;
-    margin-bottom: -15px;
+    color: #000000;
+    font-size: 1.05em;
+    margin-top: 0;
+    margin-bottom: -8px;
 }
 
 a {
@@ -79,14 +89,67 @@ del {
 #header {
     background: #000000;
     border-right: solid 3px #9a9a9a;
-    border-bottom: solid 3px #9a9a9a;
-    margin: 15px auto 9px auto;
+    border-bottom: solid 1px #9a9a9a;
+    margin: 35px auto 0 auto;
+    padding: 8px 8px 0 8px;
+    width: 750px;
+    text-align: center;
+}
+
+#nav {
+    background-color: #99aadd;
+    border-right: solid 3px #6484e0;
+    border-bottom: solid 1px #6484e0;
+    margin: 0 auto;
     padding: 0 8px;
     width: 750px;
     text-align: center;
 }
 
+#nav ul {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 0;
+    padding: 3px 0;
+    list-style-type: none;
+}
+
+#nav ul li {
+    display: inline;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav ul li a {
+    color: #000000;
+    letter-spacing: -1px;
+    padding: 3px 5px;
+    margin: 0;
+    text-decoration: none;
+}
+
+#nav li a:link, #nav li a:visited {
+    border-left: solid 1px #99aadd;
+    border-right: solid 2px #99aadd;
+    background-color: #99aadd;
+}
+
+#nav li a:hover, #nav li a:active {
+    border-left: solid 1px #000000;
+    border-right: solid 2px #6484e0;
+    background-color: #eeeeee;
+}
+
+#nav ul li:after {
+    content: "\00b7";
+}
+#nav ul li.lastItem:after {
+    content: "";
+}
+
 #content {
+    clear: both;
     background: #d7f5d7;
     border-right: solid 3px #2e6b2e;
     margin: 0 auto;
@@ -109,13 +172,18 @@ del {
     left: 0;
     margin: 0;
     width: 100%;
-    text-align: right;
+    text-align: center;
 }
 
-/*#bottomFixed > div {
-    position: relative;
-    margin-left: 100px;
-}*/
+#bottomFixed div.copyright {
+    float: left;
+    padding-left: 5px;
+}
+
+#bottomFixed div.badges {
+    text-align: right;
+    padding-right: 5px;
+}
 
 .blue {
     color: #6484e0;
