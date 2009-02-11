@@ -65,8 +65,12 @@ a img {
     text-decoration: none;
 }
 
-acronym {
+acronym, abbr {
     border-bottom: 1px dotted #2e6B2e;
+}
+
+acronym:hover, abbr:hover {
+	cursor: help;
 }
 
 address {
