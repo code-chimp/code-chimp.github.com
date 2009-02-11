@@ -164,6 +164,7 @@ del {
     margin: 0 auto;
     padding: 3px 8px;
     width: 750px;
+    text-align: center;
 }
 
 #bottomFixed {
@@ -195,4 +196,9 @@ del {
 
 .hideTitle, a.skip {
     display: none;
+}
+
+.quote {
+    font-size: 0.75em; 
+    color: #000000; 
 }
