@@ -8,7 +8,7 @@ body {
     , "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono"
     , "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier
     , monospace;
-    font-size: 14px;
+    font-size: 0.9em;
     color: #333333;
     height: 100%;
     background-color: transparent;
@@ -104,52 +104,46 @@ del {
     background-color: #99aadd;
     border-right: solid 3px #6484e0;
     border-bottom: solid 1px #6484e0;
-    margin: 0 auto;
+    margin: -1px auto 0 auto;
     padding: 0 8px;
     width: 750px;
-    text-align: center;
+    font-size: 0.9em;
+    text-transform: uppercase;
 }
 
 #nav ul {
-    font-size: 1.25em;
-    font-weight: bold;
     margin: 0;
-    padding: 3px 0;
-    list-style-type: none;
+    padding: 4px 0;
+    text-align: center;
 }
 
-#nav ul li {
-    display: inline;
+#nav li {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: inline;
 }
 
-#nav ul li a {
+#nav a {
     color: #000000;
-    letter-spacing: -1px;
-    padding: 3px 5px;
+    padding: 3px 8px;
     margin: 0;
     text-decoration: none;
+    border: solid 1px #99aadd;
+    border-top: none;
 }
 
-#nav li a:link, #nav li a:visited {
-    border-left: solid 1px #99aadd;
-    border-right: solid 2px #99aadd;
-    background-color: #99aadd;
+#nav a:hover ,#nav a:active {
+    background-color: #ffffff;
+    border: solid 1px #000000;
+    border-top: none;
 }
 
-#nav li a:hover, #nav li a:active {
-    border-left: solid 1px #000000;
-    border-right: solid 2px #6484e0;
-    background-color: #eeeeee;
-}
-
-#nav ul li:after {
-    content: "\00b7";
-}
-#nav ul li.lastItem:after {
-    content: "";
+#nav li.active a {
+    color: #000000;
+    background-color: #6484e0;
+    border: solid 1px #000000;
+    border-top: none;
 }
 
 #content {
@@ -171,6 +165,28 @@ del {
     text-align: center;
 }
 
+#footer a {
+    text-align: center;
+    border: solid 1px #000000;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+#footer a:link, #footer a:visited {
+    padding-right: 3px;
+    padding-left: 3px;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+
+#footer a:hover, #footer a:active {
+    border: solid 2px #000000;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: 0.85em;
+    text-decoration: none;
+}
+
 #bottomFixed {
     position: fixed;
     bottom: 0;
@@ -183,6 +199,7 @@ del {
 #bottomFixed div.copyright {
     float: left;
     padding-left: 5px;
+    font-size: 0.9em;
 }
 
 #bottomFixed div.badges {
