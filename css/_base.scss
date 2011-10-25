@@ -208,7 +208,7 @@ q, blockquote {
         &.isActive {
             color: $black;
             text: {
-                decoration: none;
+                decoration: underline;
                 transform: uppercase;
             }
         }

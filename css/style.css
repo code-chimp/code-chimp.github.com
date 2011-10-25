@@ -297,7 +297,7 @@ q, blockquote {
       text-transform: uppercase; }
     #siteNav a.isActive {
       color: black;
-      text-decoration: none;
+      text-decoration: underline;
       text-transform: uppercase; }
 
 /* end menu */
