@@ -1,0 +1,443 @@
+@charset "UTF-8";
+/* ♫ 
+    Theme Name: Boilerplate
+    Theme URI: http://aarontgrogg.com/boilerplate/
+    Description: A merger created by Aaron T. Grogg (<a href="http://aarontgrogg.com/">http://aarontgrogg.com/</a>) of the HTML5 Boilerplate (<a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a>) and the Starkers theme (<a href="http://starkerstheme.com/">http://starkerstheme.com/</a>), Boilerplate: Starkers provides developers with an ideal, bleeding-edge, clean-start theme.  Mark-up is minimal (thanks Elliott) and the most edge-case web technology is baked right in (thanks Paul, Divya and a large cast of supporting characters)!  Boilerplate themes are designed to serve as a Parent theme to whatever Child (<a href="http://codex.wordpress.org/Child_Themes">http://codex.wordpress.org/Child_Themes</a>) you care to add, but you could just as easily use this as a starting point and alter the PHP as your design needs.  More about this theme can be found at <a href="http://aarontgrogg.com/boilerplate/">http://aarontgrogg.com/boilerplate/</a>.
+    Author: Aaron T. Grogg, based on the work of Paul Irish, Divya Manian, and Elliot Jay Stocks
+    Author URI: http://aarontgrogg.com/
+    Version: 3.0
+    Tags: custom-menu, editor-style, theme-options, threaded-comments, sticky-post, microformats, rtl-language-support, translation-ready
+
+    License: GNU General Public License v2.0
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+    This CSS file is a concatenation of style.css from HTML5 Boilerplate and style.css from Starkers.
+    Comment blocks indicate where each begins and ends, like this, for example...
+*/
+/** START HTML5 Boilerplate CSS **/
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+/** 
+* html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+* v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+/* end reset */
+/* Custom Fonts */
+@font-face {
+  font-family: 'InconsolataMedium';
+  src: url("fonts/Inconsolata-webfont.eot");
+  src: url("fonts/Inconsolata-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Inconsolata-webfont.woff") format("woff"), url("fonts/Inconsolata-webfont.ttf") format("truetype"), url("fonts/Inconsolata-webfont.svg#InconsolataMedium") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'QuicksandLight';
+  src: url("fonts/Quicksand_Light-webfont.eot");
+  src: url("fonts/Quicksand_Light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Quicksand_Light-webfont.woff") format("woff"), url("fonts/Quicksand_Light-webfont.ttf") format("truetype"), url("fonts/Quicksand_Light-webfont.svg#QuicksandLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'QuicksandLightOblique';
+  src: url("fonts/Quicksand_Light_Oblique-webfont.eot");
+  src: url("fonts/Quicksand_Light_Oblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Quicksand_Light_Oblique-webfont.woff") format("woff"), url("fonts/Quicksand_Light_Oblique-webfont.ttf") format("truetype"), url("fonts/Quicksand_Light_Oblique-webfont.svg#QuicksandLightOblique") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'QuicksandBook';
+  src: url("fonts/Quicksand_Book-webfont.eot");
+  src: url("fonts/Quicksand_Book-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Quicksand_Book-webfont.woff") format("woff"), url("fonts/Quicksand_Book-webfont.ttf") format("truetype"), url("fonts/Quicksand_Book-webfont.svg#QuicksandBook") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'QuicksandBookOblique';
+  src: url("fonts/Quicksand_Book_Oblique-webfont.eot");
+  src: url("fonts/Quicksand_Book_Oblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Quicksand_Book_Oblique-webfont.woff") format("woff"), url("fonts/Quicksand_Book_Oblique-webfont.ttf") format("truetype"), url("fonts/Quicksand_Book_Oblique-webfont.svg#QuicksandBookOblique") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'QuicksandBold';
+  src: url("fonts/Quicksand_Bold-webfont.eot");
+  src: url("fonts/Quicksand_Bold-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Quicksand_Bold-webfont.woff") format("woff"), url("fonts/Quicksand_Bold-webfont.ttf") format("truetype"), url("fonts/Quicksand_Bold-webfont.svg#QuicksandBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'QuicksandBoldOblique';
+  src: url("fonts/Quicksand_Bold_Oblique-webfont.eot");
+  src: url("fonts/Quicksand_Bold_Oblique-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Quicksand_Bold_Oblique-webfont.woff") format("woff"), url("fonts/Quicksand_Bold_Oblique-webfont.ttf") format("truetype"), url("fonts/Quicksand_Bold_Oblique-webfont.svg#QuicksandBoldOblique") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'QuicksandDash';
+  src: url("fonts/Quicksand_Dash-webfont.eot");
+  src: url("fonts/Quicksand_Dash-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/Quicksand_Dash-webfont.woff") format("woff"), url("fonts/Quicksand_Dash-webfont.ttf") format("truetype"), url("fonts/Quicksand_Dash-webfont.svg#QuicksandDash") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* end Custom Fonts */
+/* Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/ */
+body {
+  font: 13px/1.231 sans-serif;
+  *font-size: small; }
+
+select, input, textarea, button {
+  font: 99% sans-serif; }
+
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+/* end Font normalization */
+html {
+  margin: 20px; }
+
+body {
+  margin: 0 auto;
+  padding: 15px;
+  max-width: 960px; }
+  body > header {
+    display: block;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    font-family: "InconsolataMedium", "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono; }
+    body > header > a:hover, body > header > a:active {
+      text-decoration: none; }
+    body > header > a > hgroup {
+      float: left; }
+      body > header > a > hgroup > h1 {
+        color: #0074b2;
+        display: block;
+        margin-left: -25px;
+        font-weight: bold;
+        font-size: 32px; }
+      body > header > a > hgroup > h2 {
+        color: #018752;
+        display: block;
+        margin: -5px 0 15px -25px;
+        font-family: "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono;
+        font-size: 26px; }
+      body > header > a > hgroup > h3 {
+        visibility: hidden;
+        display: none; }
+    body > header nav {
+      font-family: "QuicksandBook", Georgia, Times, serif;
+      float: right; }
+  body > section {
+    margin-top: 100px; }
+  body > footer {
+    color: #888;
+    text-align: right;
+    margin-right: 25px;
+    margin-top: 25px; }
+    body > footer #altSites {
+      width: 100%;
+      text-align: center;
+      font-size: smaller;
+      margin-top: 10px; }
+
+h1 {
+  display: inline;
+  margin: 0;
+  font-weight: 600; }
+  h1 a {
+    color: black;
+    text-decoration: none; }
+
+h2, h3, h4 {
+  display: inline;
+  margin: 0;
+  font-weight: 600; }
+
+a {
+  color: #0074b2;
+  cursor: pointer; }
+  a:link, a:visited {
+    text-decoration: none; }
+  a:hover, a:active {
+    color: #018752;
+    text-decoration: underline; }
+
+q, blockquote {
+  quotes: "\201C" "\201D";
+  font-weight: bolder; }
+  q:before, blockquote:before {
+    content: open-quote; }
+  q:after, blockquote:after {
+    content: close-quote; }
+
+.post {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 30px; }
+  .post:last-child {
+    margin-bottom: 10px; }
+  .post header {
+    margin-bottom: 10px; }
+    .post header time {
+      line-height: 22px;
+      float: right;
+      font-size: 18px;
+      font-weight: bolder; }
+  .post p {
+    margin: 10px 0; }
+  .post .body p:first-child {
+    margin-top: 0; }
+  .post .body p:last-child {
+    margin-bottom: 0; }
+  .post .more {
+    margin-top: -10px;
+    margin-right: 30px;
+    font-style: italic;
+    text-align: right; }
+    .post .more a {
+      text-decoration: none; }
+      .post .more a:hover {
+        text-decoration: underline; }
+
+/* menu */
+#siteNav {
+  margin: 25px 0 0 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  font-size: 18px; }
+  #siteNav li {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    float: left;
+    height: 40px; }
+  #siteNav a {
+    padding: 10px 20px;
+    float: left;
+    height: 20px;
+    line-height: 20px; }
+    #siteNav a:link, #siteNav a:visited {
+      color: #888;
+      text-transform: lowercase; }
+    #siteNav a:hover, #siteNav a:active, #siteNav a .isActive {
+      color: #000;
+      text-decoration: none;
+      text-transform: uppercase; }
+
+/* end menu */
+code, .syntaxhighlighter {
+  font-family: "InconsolataMedium", "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono;
+  font-size: 15px; }
+
+#aboutMe {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 60px; }
+  #aboutMe header {
+    margin-bottom: 15px; }
+    #aboutMe header h1 {
+      font-size: 18px; }
+  #aboutMe p {
+    margin-bottom: 15px; }
+    #aboutMe p:last {
+      margin-bottom: 0; }
+  #aboutMe .signature {
+    text-align: right; }
+  #aboutMe footer {
+    margin-top: 20px; }
+    #aboutMe footer #social, #aboutMe footer #resumes {
+      width: 150px; }
+    #aboutMe footer #social {
+      float: left; }
+    #aboutMe footer #resumes {
+      float: right; }
+
+/** Non-semantic helper classes: please define your styles before this section. **/
+/* For image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr; }
+
+.hidden {
+  display: none;
+  visibility: hidden; }
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+  .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto; }
+
+.invisible {
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+  .clearfix:after {
+    clear: both;
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .clearfix:before {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+
+@media only screen and (max-width: 479px) {
+  body, #main-page-nav, #banner-social, #content {
+    max-width: 320px; }
+
+  #mobile-subbanner {
+    max-width: 320px;
+    overflow: hidden; }
+    #mobile-subbanner > img {
+      position: relative;
+      left: -80px; }
+
+  #banner-social ul li a {
+    font-size: 14px; }
+
+  .nav-back h2 {
+    font-size: 16px; }
+
+  #tweet-header h2 {
+    font-size: 16px; }
+
+  #content #site-nav ul li {
+    width: 31%; }
+    #content #site-nav ul li a {
+      font-size: 14px; }
+  #content article h1 {
+    font-size: 18px; } }
+@media only screen and (min-width: 480px) {
+  /* Style adjustments for viewports 480px and over go here */ }
+@media only screen and (min-width: 768px) {
+  /* Style adjustments for viewports 768px and over go here */ }
+/* Inlined to avoid required HTTP connection */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: ""; }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr, img {
+    page-break-inside: avoid; }
+
+  @page {
+    margin: 0.5cm; }
+
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2, h3 {
+    page-break-after: avoid; } }

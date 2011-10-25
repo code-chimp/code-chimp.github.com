@@ -1,0 +1,113 @@
+/** Non-semantic helper classes: please define your styles before this section. **/
+/* For image replacement */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { 
+    border: 0; 
+    clip: rect(0 0 0 0); 
+    height: 1px; 
+    margin: -1px; 
+    overflow: hidden; 
+    padding: 0; 
+    position: absolute; 
+    width: 1px; 
+    
+    &.focusable:active, &.focusable:focus {
+        clip: auto; height: auto; 
+        margin: 0; 
+        overflow: visible; 
+        position: static; 
+        width: auto;
+    }
+}
+.invisible { visibility: hidden; }
+.clearfix { 
+    zoom: 1; 
+    
+    &:after {
+        clear: both;
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden;
+    }
+    
+    &:before {
+        content: "\0020"; 
+        display: block; 
+        height: 0; 
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    body, #main-page-nav, #banner-social, #content {
+        max-width: 320px;
+    }
+    
+    #mobile-subbanner {
+        max-width: 320px;
+        overflow: hidden;
+        
+        &>img {
+            position: relative;
+            left: (320px - 480px) / 2;
+        }
+    }
+    
+    #banner-social ul li a {
+        font-size: $baseFontSize - 2px;
+    }
+    
+    .nav-back {
+        h2 {
+            font-size: 16px;
+        }
+    }
+    
+    #tweet-header {
+        h2 {
+            font-size: 16px;
+        }
+    }
+    
+    #content {
+        #site-nav ul li {
+            width: 31%;
+            
+            a {
+                font-size: $baseFontSize - 2px;
+            }
+        }
+        
+        article {
+            h1 {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) {
+    /* Style adjustments for viewports 480px and over go here */
+}
+
+@media only screen and (min-width: 768px) {
+    /* Style adjustments for viewports 768px and over go here */
+}
+
+/* Inlined to avoid required HTTP connection */
+@media print {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+  -ms-filter: none !important; } 
+  a, a:visited { color: #444 !important; text-decoration: underline; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } 
+  tr, img { page-break-inside: avoid; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3{ page-break-after: avoid; }
+}

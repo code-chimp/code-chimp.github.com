@@ -1,0 +1,19 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Head Quang: Tim Goshinski
+  Site:       http://www.code-chimp.net
+  Twitter:    @code_chimp
+  Location:   USA
+
+/* THANKS */
+  Names (& URL): Paul Irish & Co. (http://html5boilerplate.com)
+                 Alex Gorbatchev (http://alexgorbatchev.com/SyntaxHighlighter)
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery, SyntaxHighlighter
+  Software: Azure, C#, MVC2
+  SCM: Mercurial
