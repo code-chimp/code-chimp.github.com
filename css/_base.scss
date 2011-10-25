@@ -1,6 +1,6 @@
 html { margin: 20px }
 
-body {
+#page-container {
     margin: 0 auto;
     padding: 15px;
     max-width: 960px;
@@ -192,6 +192,12 @@ q, blockquote {
         &:hover, &:active, .isActive {
             color: #000;
             text-decoration: none;
+            text-transform: uppercase;
+        }
+        
+        &.isActive {
+            color: #000;
+            text-decoration: underline;
             text-transform: uppercase;
         }
     }

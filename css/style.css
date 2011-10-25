@@ -165,45 +165,45 @@ pre, code, kbd, samp {
 html {
   margin: 20px; }
 
-body {
+#page-container {
   margin: 0 auto;
   padding: 15px;
   max-width: 960px; }
-  body > header {
+  #page-container > header {
     display: block;
     padding-top: 30px;
     margin-bottom: 20px;
     font-family: "InconsolataMedium", "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono; }
-    body > header > a:hover, body > header > a:active {
+    #page-container > header > a:hover, #page-container > header > a:active {
       text-decoration: none; }
-    body > header > a > hgroup {
+    #page-container > header > a > hgroup {
       float: left; }
-      body > header > a > hgroup > h1 {
+      #page-container > header > a > hgroup > h1 {
         color: #0074b2;
         display: block;
         margin-left: -25px;
         font-weight: bold;
         font-size: 32px; }
-      body > header > a > hgroup > h2 {
+      #page-container > header > a > hgroup > h2 {
         color: #018752;
         display: block;
         margin: -5px 0 15px -25px;
         font-family: "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono;
         font-size: 26px; }
-      body > header > a > hgroup > h3 {
+      #page-container > header > a > hgroup > h3 {
         visibility: hidden;
         display: none; }
-    body > header nav {
+    #page-container > header nav {
       font-family: "QuicksandBook", Georgia, Times, serif;
       float: right; }
-  body > section {
+  #page-container > section {
     margin-top: 100px; }
-  body > footer {
+  #page-container > footer {
     color: #888;
     text-align: right;
     margin-right: 25px;
     margin-top: 25px; }
-    body > footer #altSites {
+    #page-container > footer #altSites {
       width: 100%;
       text-align: center;
       font-size: smaller;
@@ -292,6 +292,10 @@ q, blockquote {
     #siteNav a:hover, #siteNav a:active, #siteNav a .isActive {
       color: #000;
       text-decoration: none;
+      text-transform: uppercase; }
+    #siteNav a.isActive {
+      color: #000;
+      text-decoration: underline;
       text-transform: uppercase; }
 
 /* end menu */
