@@ -1,5 +1,13 @@
 html { margin: 20px }
 
+body {
+    font: {
+        family: $baseFont;
+        size: $baseFontSize;
+    }
+    color: $baseFontColor;
+}
+
 #page-container {
     margin: 0 auto;
     padding: 15px;
@@ -20,20 +28,20 @@ html { margin: 20px }
                 & > h1 {
                     color: $baseBlue;
                     display: block;
-                    margin-left: -25px;
+                    //margin-left: -25px;
                     font: {
                         weight: bold;
-                        size: 32px;
+                        size: $baseFontSize * 2;
                     }
                 }
                 
                 & > h2 {
                     color: $baseGreen;
                     display: block;
-                    margin: -5px 0 15px -25px;
+                    margin: -5px 0 15px 0;
                     font: {
                         family:  $monoFont2;
-                        size: 26px;
+                        size: $baseFontSize + 10px;
                     }
                 }
                 
@@ -51,7 +59,7 @@ html { margin: 20px }
     }
     
     & > section {
-        margin-top: 100px;
+        //margin-top: 100px;
     }
     
     & > footer {
@@ -190,15 +198,19 @@ q, blockquote {
             text-transform: lowercase;
         }
         &:hover, &:active, .isActive {
-            color: #000;
-            text-decoration: none;
-            text-transform: uppercase;
+            color: $black;
+            text: {
+                decoration: none;
+                transform: uppercase;
+            }
         }
         
         &.isActive {
-            color: #000;
-            text-decoration: underline;
-            text-transform: uppercase;
+            color: $black;
+            text: {
+                decoration: none;
+                transform: uppercase;
+            }
         }
     }
 }
@@ -223,7 +235,7 @@ code, .syntaxhighlighter {
     
     p {
         margin-bottom: 15px;
-        &:last {margin-bottom: 0;}
+        &:last { margin-bottom: 0; }
     }
     
     .signature { text-align: right; }

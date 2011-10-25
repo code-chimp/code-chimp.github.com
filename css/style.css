@@ -165,6 +165,11 @@ pre, code, kbd, samp {
 html {
   margin: 20px; }
 
+body {
+  font-family: "QuicksandBook", Georgia, Times, serif;
+  font-size: 16px;
+  color: #444444; }
+
 #page-container {
   margin: 0 auto;
   padding: 15px;
@@ -181,13 +186,12 @@ html {
       #page-container > header > a > hgroup > h1 {
         color: #0074b2;
         display: block;
-        margin-left: -25px;
         font-weight: bold;
         font-size: 32px; }
       #page-container > header > a > hgroup > h2 {
         color: #018752;
         display: block;
-        margin: -5px 0 15px -25px;
+        margin: -5px 0 15px 0;
         font-family: "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono;
         font-size: 26px; }
       #page-container > header > a > hgroup > h3 {
@@ -196,8 +200,6 @@ html {
     #page-container > header nav {
       font-family: "QuicksandBook", Georgia, Times, serif;
       float: right; }
-  #page-container > section {
-    margin-top: 100px; }
   #page-container > footer {
     color: #888;
     text-align: right;
@@ -290,12 +292,12 @@ q, blockquote {
       color: #888;
       text-transform: lowercase; }
     #siteNav a:hover, #siteNav a:active, #siteNav a .isActive {
-      color: #000;
+      color: black;
       text-decoration: none;
       text-transform: uppercase; }
     #siteNav a.isActive {
-      color: #000;
-      text-decoration: underline;
+      color: black;
+      text-decoration: none;
       text-transform: uppercase; }
 
 /* end menu */
