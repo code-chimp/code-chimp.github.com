@@ -2,8 +2,18 @@
 layout: default
 title: Repository
 ---
-
-                    <h2>Repository Front Page</h2>
-                    <p>A temporary placeholder until I write some snazzy content to put here.</p>
-                    <br />
+<section id="articles">
+{% for post in site.posts %}
+  <article class="post">
+    <header>
+      <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+      <time datetime="2011-06-19">{{ post.date | date_to_string }}</time>
+    </header>
+    <section class="content">
+      {{ post.content | truncatewords:10 }}
+    </section>
+    <div class="more"><a href="{{ post.url }}">full article &#187;</a></div>
+  </article>
+{% endfor %}
+</section>
 

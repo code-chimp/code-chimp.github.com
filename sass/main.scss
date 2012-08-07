@@ -29,18 +29,18 @@
  * - praegnanz.de/weblog/htmlcssjs-kickstart
  */
 $baseFont: 'QuicksandBook', Georgia, Times, serif;
-$baseFontColor: #444;
+$baseFontColor: rgba(68,68,68,1);
 $baseFontSize: 16px;
 $monoFont: 'InconsolataMedium', 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
 $monoFont2: 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
 $baseBlue: rgb(0, 116, 178);
-$baseGreen: #018752;
+$baseGreen: rgba(1,135,82,1);
 
 // colors
-$white: #fff;
-$black: #000;
-$grey: #a9b2b8;
-$watermark: #737373;
+$white: rgba(255,255,255,1);
+$black: rgba(0,0,0,1);
+$grey: rgba(169,178,184,1);
+$watermark: rgba(115,115,115,1);
 
 @import "reset";
 @import "embedded_fonts";

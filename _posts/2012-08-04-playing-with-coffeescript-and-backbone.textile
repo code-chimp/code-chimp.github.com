@@ -1,0 +1,6 @@
+---
+layout: post
+title: Playing with CoffeeScript and Backbone
+---
+
+p. You got the right one baby, uh-huh.

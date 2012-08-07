@@ -1,0 +1,10 @@
+---
+layout: post
+title: First Public Repository
+---
+
+p. Yeah, I got that. Here is an example of a longish article that runs on for a 
+bit before it eventually ends in much pain and suffering. Woe be unto all that
+are forced to read it in its entirety.
+
+h2. What 'chu lookin at?
