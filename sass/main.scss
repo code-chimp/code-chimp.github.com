@@ -1,49 +1,308 @@
-@charset "UTF-8";
-/* ♫ 
-    Theme Name: Boilerplate
-    Theme URI: http://aarontgrogg.com/boilerplate/
-    Description: A merger created by Aaron T. Grogg (<a href="http://aarontgrogg.com/">http://aarontgrogg.com/</a>) of the HTML5 Boilerplate (<a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a>) and the Starkers theme (<a href="http://starkerstheme.com/">http://starkerstheme.com/</a>), Boilerplate: Starkers provides developers with an ideal, bleeding-edge, clean-start theme.  Mark-up is minimal (thanks Elliott) and the most edge-case web technology is baked right in (thanks Paul, Divya and a large cast of supporting characters)!  Boilerplate themes are designed to serve as a Parent theme to whatever Child (<a href="http://codex.wordpress.org/Child_Themes">http://codex.wordpress.org/Child_Themes</a>) you care to add, but you could just as easily use this as a starting point and alter the PHP as your design needs.  More about this theme can be found at <a href="http://aarontgrogg.com/boilerplate/">http://aarontgrogg.com/boilerplate/</a>.
-    Author: Aaron T. Grogg, based on the work of Paul Irish, Divya Manian, and Elliot Jay Stocks
-    Author URI: http://aarontgrogg.com/
-    Version: 3.0
-    Tags: custom-menu, editor-style, theme-options, threaded-comments, sticky-post, microformats, rtl-language-support, translation-ready
-
-    License: GNU General Public License v2.0
-    License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-    This CSS file is a concatenation of style.css from HTML5 Boilerplate and style.css from Starkers.
-    Comment blocks indicate where each begins and ends, like this, for example...
-*/
-
-/** START HTML5 Boilerplate CSS **/
-
-/**
- * HTML5 ✰ Boilerplate
+/*
+ * HTML5 Boilerplate
  *
- * style.css contains a reset, font normalization and some base styles.
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
  *
- * Credit is left where credit is due.
- * Much inspiration was taken from these projects:
- * - yui.yahooapis.com/2.8.1/build/base/base.css
- * - camendesign.com/design/
- * - praegnanz.de/weblog/htmlcssjs-kickstart
+ * Detailed information about this CSS: h5bp.com/css
  */
-$baseFont: 'QuicksandBook', Georgia, Times, serif;
-$baseFontColor: rgba(68,68,68,1);
-$baseFontSize: 16px;
-$monoFont: 'InconsolataMedium', 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
-$monoFont2: 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
-$baseBlue: rgb(0, 116, 178);
-$baseGreen: rgba(1,135,82,1);
+
+// variables
+$base-fontstack: 'QuicksandBook', Georgia, Times, serif;
+$mono-fontstack: 'InconsolataMedium', 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
+$mono2-fontstack: 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
+$base-color: rgba(68,68,68,1);
+$footer-color: rgba(136,136,136,1);
+$my-blue: rgba(0,116,178,1);
+$my-green: rgba(1,135,82,1);
+$selection-background: rgba(175,255,175,1);
 
 // colors
-$white: rgba(255,255,255,1);
 $black: rgba(0,0,0,1);
-$grey: rgba(169,178,184,1);
-$watermark: rgba(115,115,115,1);
+$white: rgba(255,255,255,1);
+$grey-50: rgba(127,127,127,1);
 
-@import "reset";
+// SASS functions and mixins for this project
+@import "my_funcs";
+
+// HTML5 display definitions for decrepit browsers
+@import "html5";
+
+// Any embedded fonts needed for this project
 @import "embedded_fonts";
-@import "font_normalization";
+
+// Normalization tricks
 @import "base";
+
+//http://thesassway.com/intermediate/responsive-web-design-part-1
+//http://www.dandenney.com/posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths
+/* Primary Styles        */
+/* Author: Tim Goshinski */
+html { margin: 20px }
+body {
+  margin: 0 auto;
+  padding: 15px;
+  width: 720px;
+  color: $base-color;
+  font-family: $base-fontstack;
+  font-weight: normal;
+
+  > header {
+    display: block;
+    padding-top: 30px;
+    margin-bottom: 20px;
+
+    > a {
+      font-family: $mono-fontstack;
+
+      &:hover, &:active { text-decoration: none; }
+
+      > hgroup {
+        float: left;
+
+        > h1 {
+          color: $my-blue;
+          display: block;
+          margin-left: -25px;
+          font: {
+            weight: bold;
+            size: calc-ems(32px, 16px);
+          }
+          line-height: calc-ems(39.5px, 32px);
+        }
+
+        > h2 {
+          color: $my-green;
+          display: block;
+          margin: -5px 0 15px -25px;
+          font: {
+            family: $mono2-fontstack;
+            size: calc-ems(26px, 16px);
+          }
+          line-height: calc-ems(32px, 26px);
+        }
+
+        > h3 {
+          visibility: hidden;
+          display: none;
+        }
+      }
+    }
+
+    nav {
+      float: right;
+    }
+  }
+
+  > section { /*margin-top: 100px;*/ }
+
+  > footer {
+    color: $footer-color;
+    text-align: right;
+    font-size: calc-ems(13px, 16px);
+
+    a {
+      color: $my-blue;
+
+      &:link, &:visited {
+        color: $my-blue;
+        text-decoration: none;
+      }
+
+      &:hover, &:active {
+        color: $my-green;
+        text-decoration: underline;
+      }
+    }
+
+    margin: {
+      right: 25px;
+      top: 25px;
+    }
+
+
+    #altSites {
+      width: 100%;
+      text-align: center;
+      font-size: calc-ems(11px, 13px);
+      margin-top: 10px;
+    }
+  }
+}
+
+h1 {
+  display: inline;
+  margin: 0;
+  font-weight: 600;
+
+  a {
+    color: $black;
+    text-decoration: none;
+  }
+}
+
+h2, h3, h4 {
+  display: inline;
+  margin: 0;
+  font-weight: 600;
+}
+
+a {
+  color: $my-blue;
+  &:link, &:visited {
+    color: $my-blue;
+    text-decoration: none;
+  }
+  &:hover, &:active {
+    color: $my-green;
+    text-decoration: underline;
+  }
+}
+
+q, blockquote {
+    quotes: "\201C" "\201D";
+    font: {
+        weight: bolder;
+        /*size: smaller;*/
+    }
+    &:before {
+        content: open-quote;
+    }
+    &:after {
+        content: close-quote;
+    }
+}
+
+.post {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 10px;
+    }
+    header {
+        margin-bottom: 10px;
+        time {
+            line-height: 22px;
+            float: right;
+            font: {
+                size: 18px;
+                weight: bolder;
+            }
+        }
+    }
+    p {
+        margin: 10px 0;
+    }
+    .body {
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .more {
+        margin-top: -10px;
+        margin-right: 30px;
+        font-style: italic;
+        text-align: right;
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+/* menu */
+#siteNav {
+    margin: 25px 0 0 0;
+    padding: 0;
+    list-style: none;
+    clear: both;
+    float: left;
+    font-size: calc-ems(15.6px, 16px);
+
+    li {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      float: left;
+      height: 40px;
+    }
+
+  a {
+    padding: 10px 20px;
+    float: left;
+    clear: both;
+    height: 20px;
+    line-height: 20px;
+
+    &:link, &:visited {
+      color: $footer-color;
+      text-transform: lowercase;
+    }
+
+    &:hover, &:active, .isActive {
+      color: $black;
+      text-decoration: none;
+      text-transform: uppercase;
+      margin-right: 8px;
+    }
+  }
+}
+/* end menu */
+
+code, .syntaxhighlighter {
+  font: {
+    family: $mono-fontstack;
+    size: 1em;
+  }
+}
+
+#main {
+  h1 { font-size: calc-ems(21px, 16px); }
+}
+
+#aboutMe {
+  margin-bottom: 60px;
+
+  header { margin-bottom: 15px; }
+
+  p {
+    margin-bottom: 15px;
+    &:last { margin-bottom: 0; }
+  }
+
+  .pageQuote {
+    text-align: center;
+    font-size: calc-ems(13px, 16px);
+    line-height: calc-ems(15px, 13px);
+
+    small { font-size: calc-ems(11px, 13px); }
+  }
+
+  .signature {
+    text-align: right;
+    margin-right: 10px;
+  }
+
+  footer {
+    margin-top: 20px;
+    #social, #resumes { width: calc-width-pct(150px, 720px); }
+    #social { float: left; }
+    #resumes { float: right; }
+  }
+}
+/* End Primary Styles */
+
+// Any adjustments needed for mobile or other browser types
+@import "responsive";
+
+// Helper classes like clearfix, ir, etc.
 @import "helper";

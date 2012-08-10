@@ -3,4 +3,4 @@ layout: post
 title: Playing with CoffeeScript and Backbone
 ---
 
-p. You got the right one baby, uh-huh.
+p. Daily use of TFS has enfeebled my mind.

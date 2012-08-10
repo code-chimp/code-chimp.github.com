@@ -1,0 +1,7 @@
+@function calc-ems($target, $context) {
+    @return ($target / $context) * 1em;
+}
+
+@function calc-width-pct($target, $context) {
+    @return ($target / $context) * 100%;
+}

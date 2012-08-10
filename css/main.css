@@ -1,97 +1,29 @@
-@charset "UTF-8";
-/* ♫ 
-    Theme Name: Boilerplate
-    Theme URI: http://aarontgrogg.com/boilerplate/
-    Description: A merger created by Aaron T. Grogg (<a href="http://aarontgrogg.com/">http://aarontgrogg.com/</a>) of the HTML5 Boilerplate (<a href="http://html5boilerplate.com/">http://html5boilerplate.com/</a>) and the Starkers theme (<a href="http://starkerstheme.com/">http://starkerstheme.com/</a>), Boilerplate: Starkers provides developers with an ideal, bleeding-edge, clean-start theme.  Mark-up is minimal (thanks Elliott) and the most edge-case web technology is baked right in (thanks Paul, Divya and a large cast of supporting characters)!  Boilerplate themes are designed to serve as a Parent theme to whatever Child (<a href="http://codex.wordpress.org/Child_Themes">http://codex.wordpress.org/Child_Themes</a>) you care to add, but you could just as easily use this as a starting point and alter the PHP as your design needs.  More about this theme can be found at <a href="http://aarontgrogg.com/boilerplate/">http://aarontgrogg.com/boilerplate/</a>.
-    Author: Aaron T. Grogg, based on the work of Paul Irish, Divya Manian, and Elliot Jay Stocks
-    Author URI: http://aarontgrogg.com/
-    Version: 3.0
-    Tags: custom-menu, editor-style, theme-options, threaded-comments, sticky-post, microformats, rtl-language-support, translation-ready
-
-    License: GNU General Public License v2.0
-    License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-    This CSS file is a concatenation of style.css from HTML5 Boilerplate and style.css from Starkers.
-    Comment blocks indicate where each begins and ends, like this, for example...
-*/
-/** START HTML5 Boilerplate CSS **/
-/**
- * HTML5 ✰ Boilerplate
+/*
+ * HTML5 Boilerplate
  *
- * style.css contains a reset, font normalization and some base styles.
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
  *
- * Credit is left where credit is due.
- * Much inspiration was taken from these projects:
- * - yui.yahooapis.com/2.8.1/build/base/base.css
- * - camendesign.com/design/
- * - praegnanz.de/weblog/htmlcssjs-kickstart
+ * Detailed information about this CSS: h5bp.com/css
  */
-/** 
-* html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
-* v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
-*/
-html, body, div, span, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
-small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+/** HTML5 display definitions **/
+article, aside, details, figcaption, figure, footer, header,
+hgroup, nav, section, summary {
   display: block; }
 
-blockquote, q {
-  quotes: none; }
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: "";
-  content: none; }
+audio:not([controls]) {
+  display: none; }
 
-ins {
-  background-color: #ff9;
-  color: #000;
-  text-decoration: none; }
+[hidden] {
+  display: none; }
 
-mark {
-  background-color: #ff9;
-  color: #000;
-  font-style: italic;
-  font-weight: bold; }
-
-del {
-  text-decoration: line-through; }
-
-abbr[title], dfn[title] {
-  border-bottom: 1px dotted;
-  cursor: help; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0; }
-
-input, select {
-  vertical-align: middle; }
-
-/* end reset */
+/** end HTML5 display definitions **/
 /* Custom Fonts */
 @font-face {
   font-family: 'InconsolataMedium';
@@ -150,65 +82,266 @@ input, select {
   font-style: normal; }
 
 /* end Custom Fonts */
-/* Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/ */
-body {
-  font: 13px/1.231 sans-serif;
-  *font-size: small; }
+/** base styles **/
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
 
-select, input, textarea, button {
-  font: 99% sans-serif; }
+html, button, input, select, textarea {
+  font-family: sans-serif;
+  color: #222; }
+
+body {
+  margin: 0;
+  font-size: 100%;
+  line-height: 1.188em; }
+
+::-moz-selection {
+  background: #afffaf;
+  text-shadow: none; }
+
+::selection {
+  background: #afffaf;
+  text-shadow: none; }
+
+/** Links **/
+a {
+  color: #00e; }
+  a:visited {
+    color: #551a8b; }
+  a:hover {
+    color: #06e; }
+  a:focus {
+    outline: thin dotted; }
+  a:hover, a:active {
+    outline: 0; }
+
+/** Typography **/
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b, strong {
+  font-weight: bold; }
+
+blockquote {
+  margin: 1em 40px; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+ins {
+  background: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
 
 pre, code, kbd, samp {
-  font-family: monospace, sans-serif; }
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
 
-/* end Font normalization */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: none; }
+  q:before, q:after {
+    content: "";
+    content: none; }
+
+small {
+  font-size: 85%; }
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/** Lists **/
+ul, ol {
+  margin: 1em 0;
+  padding: 0 0 0 40px; }
+
+dd {
+  margin: 0 0 0 40px; }
+
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0; }
+
+/** Embedded content **/
+img {
+  border: 0;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+/** Figures **/
+figure {
+  margin: 0; }
+
+/** Forms **/
+form {
+  margin: 0; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+label {
+  cursor: pointer; }
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+  *margin-left: -7px; }
+
+button, input, select, textarea {
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+  *vertical-align: middle; }
+
+button, input {
+  line-height: normal; }
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+  *overflow: visible; }
+
+button[disabled], input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  *width: 13px;
+  *height: 13px; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+  input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+  resize: vertical; }
+
+/** Tables **/
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td {
+  vertical-align: top; }
+
+/** Chrome Frame Prompt **/
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* end base styles */
+/* Primary Styles        */
+/* Author: Tim Goshinski */
 html {
   margin: 20px; }
 
 body {
-  font-family: "QuicksandBook", Georgia, Times, serif;
-  font-size: 16px;
-  color: #444444; }
-
-#page-container {
   margin: 0 auto;
   padding: 15px;
-  max-width: 960px; }
-  #page-container > header {
+  width: 720px;
+  color: #444444;
+  font-family: "QuicksandBook", Georgia, Times, serif;
+  font-weight: normal; }
+  body > header {
     display: block;
     padding-top: 30px;
-    margin-bottom: 20px;
-    font-family: "InconsolataMedium", "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono; }
-    #page-container > header > a:hover, #page-container > header > a:active {
-      text-decoration: none; }
-    #page-container > header > a > hgroup {
-      float: left; }
-      #page-container > header > a > hgroup > h1 {
-        color: #0074b2;
-        display: block;
-        font-weight: bold;
-        font-size: 32px; }
-      #page-container > header > a > hgroup > h2 {
-        color: #018752;
-        display: block;
-        margin: -5px 0 15px 0;
-        font-family: "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono;
-        font-size: 26px; }
-      #page-container > header > a > hgroup > h3 {
-        visibility: hidden;
-        display: none; }
-    #page-container > header nav {
-      font-family: "QuicksandBook", Georgia, Times, serif;
+    margin-bottom: 20px; }
+    body > header > a {
+      font-family: "InconsolataMedium", "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono; }
+      body > header > a:hover, body > header > a:active {
+        text-decoration: none; }
+      body > header > a > hgroup {
+        float: left; }
+        body > header > a > hgroup > h1 {
+          color: #0074b2;
+          display: block;
+          margin-left: -25px;
+          font-weight: bold;
+          font-size: 2em;
+          line-height: 1.234em; }
+        body > header > a > hgroup > h2 {
+          color: #018752;
+          display: block;
+          margin: -5px 0 15px -25px;
+          font-family: "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono;
+          font-size: 1.625em;
+          line-height: 1.231em; }
+        body > header > a > hgroup > h3 {
+          visibility: hidden;
+          display: none; }
+    body > header nav {
       float: right; }
-  #page-container > footer {
-    color: #888;
+  body > section {
+    /*margin-top: 100px;*/ }
+  body > footer {
+    color: #888888;
     text-align: right;
+    font-size: 0.813em;
     margin-right: 25px;
     margin-top: 25px; }
-    #page-container > footer #altSites {
+    body > footer a {
+      color: #0074b2; }
+      body > footer a:link, body > footer a:visited {
+        color: #0074b2;
+        text-decoration: none; }
+      body > footer a:hover, body > footer a:active {
+        color: #018752;
+        text-decoration: underline; }
+    body > footer #altSites {
       width: 100%;
       text-align: center;
-      font-size: smaller;
+      font-size: 0.846em;
       margin-top: 10px; }
 
 h1 {
@@ -225,9 +358,9 @@ h2, h3, h4 {
   font-weight: 600; }
 
 a {
-  color: #0074b2;
-  cursor: pointer; }
+  color: #0074b2; }
   a:link, a:visited {
+    color: #0074b2;
     text-decoration: none; }
   a:hover, a:active {
     color: #018752;
@@ -235,7 +368,8 @@ a {
 
 q, blockquote {
   quotes: "\201C" "\201D";
-  font-weight: bolder; }
+  font-weight: bolder;
+  /*size: smaller;*/ }
   q:before, blockquote:before {
     content: open-quote; }
   q:after, blockquote:after {
@@ -275,8 +409,9 @@ q, blockquote {
   margin: 25px 0 0 0;
   padding: 0;
   list-style: none;
+  clear: both;
   float: left;
-  font-size: 18px; }
+  font-size: 0.975em; }
   #siteNav li {
     margin: 0;
     padding: 0;
@@ -286,60 +421,73 @@ q, blockquote {
   #siteNav a {
     padding: 10px 20px;
     float: left;
+    clear: both;
     height: 20px;
     line-height: 20px; }
     #siteNav a:link, #siteNav a:visited {
-      color: #888;
+      color: #888888;
       text-transform: lowercase; }
     #siteNav a:hover, #siteNav a:active, #siteNav a .isActive {
       color: black;
       text-decoration: none;
-      text-transform: uppercase; }
-    #siteNav a.isActive {
-      color: black;
-      text-decoration: underline;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      margin-right: 8px; }
 
 /* end menu */
 code, .syntaxhighlighter {
   font-family: "InconsolataMedium", "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono;
-  font-size: 15px; }
+  font-size: 1em; }
+
+#main h1 {
+  font-size: 1.313em; }
 
 #aboutMe {
-  font-size: 16px;
-  line-height: 20px;
   margin-bottom: 60px; }
   #aboutMe header {
     margin-bottom: 15px; }
-    #aboutMe header h1 {
-      font-size: 18px; }
   #aboutMe p {
     margin-bottom: 15px; }
     #aboutMe p:last {
       margin-bottom: 0; }
+  #aboutMe .pageQuote {
+    text-align: center;
+    font-size: 0.813em;
+    line-height: 1.154em; }
+    #aboutMe .pageQuote small {
+      font-size: 0.846em; }
   #aboutMe .signature {
-    text-align: right; }
+    text-align: right;
+    margin-right: 10px; }
   #aboutMe footer {
     margin-top: 20px; }
     #aboutMe footer #social, #aboutMe footer #resumes {
-      width: 150px; }
+      width: 20.833%; }
     #aboutMe footer #social {
       float: left; }
     #aboutMe footer #resumes {
       float: right; }
 
+/* End Primary Styles */
+/** responsive design **/
+@media all and (orientation:portrait) {
+  /* Style adjustments for portrait mode goes here */ }
+@media all and (orientation:landscape) {
+  /* Style adjustments for landscape mode goes here */ }
+@media screen and (max-device-width: 480px) {
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */ }
+/** end responsive design **/
 /** Non-semantic helper classes: please define your styles before this section. **/
 /* For image replacement */
 .ir {
-  display: block;
-  text-indent: -999em;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  text-align: left;
-  direction: ltr; }
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  background-color: transparent; }
 
 .hidden {
-  display: none;
+  display: none !important;
   visibility: hidden; }
 
 .visuallyhidden {
@@ -363,7 +511,7 @@ code, .syntaxhighlighter {
   visibility: hidden; }
 
 .clearfix {
-  zoom: 1; }
+  *zoom: 1; }
   .clearfix:after {
     clear: both;
     content: "\0020";
@@ -376,47 +524,15 @@ code, .syntaxhighlighter {
     height: 0;
     overflow: hidden; }
 
-@media only screen and (max-width: 479px) {
-  body, #main-page-nav, #banner-social, #content {
-    max-width: 320px; }
-
-  #mobile-subbanner {
-    max-width: 320px;
-    overflow: hidden; }
-    #mobile-subbanner > img {
-      position: relative;
-      left: -80px; }
-
-  #banner-social ul li a {
-    font-size: 14px; }
-
-  .nav-back h2 {
-    font-size: 16px; }
-
-  #tweet-header h2 {
-    font-size: 16px; }
-
-  #content #site-nav ul li {
-    width: 31%; }
-    #content #site-nav ul li a {
-      font-size: 14px; }
-  #content article h1 {
-    font-size: 18px; } }
-@media only screen and (min-width: 480px) {
-  /* Style adjustments for viewports 480px and over go here */ }
-@media only screen and (min-width: 768px) {
-  /* Style adjustments for viewports 768px and over go here */ }
 /* Inlined to avoid required HTTP connection */
 @media print {
   * {
     background: transparent !important;
-    color: black !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important; }
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
 
   a, a:visited {
-    color: #444 !important;
     text-decoration: underline; }
 
   a[href]:after {
@@ -447,3 +563,4 @@ code, .syntaxhighlighter {
 
   h2, h3 {
     page-break-after: avoid; } }
+/** end Non-semantic helper classes **/
