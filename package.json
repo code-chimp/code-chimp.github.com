@@ -1,0 +1,10 @@
+{
+  "name": "github-code-chimp",
+  "description": "Jekyll frontend to my repository",
+  "author": "Tim Goshinski <tim@code-chimp.net>",
+  "version": "1.0.0",
+  "dependencies": {
+    "coffee-script": "*",
+    "colors": "*"
+  }
+}

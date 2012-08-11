@@ -55,11 +55,12 @@ body {
 
     > a {
       font-family: $mono-fontstack;
+      float: left;
 
       &:hover, &:active { text-decoration: none; }
 
       > hgroup {
-        float: left;
+        //float: left;
 
         > h1 {
           color: $my-blue;
@@ -221,38 +222,35 @@ q, blockquote {
 
 /* menu */
 #siteNav {
-    margin: 25px 0 0 0;
-    padding: 0;
-    list-style: none;
-    clear: both;
-    float: left;
-    font-size: calc-ems(15.6px, 16px);
+  padding-top: 16px;
+  float: right;
+  font-size: calc-ems(15.6px, 16px);
+
+  ul {
+    margin: 0 auto;
+    list-style-type: none;
+    float: right;
 
     li {
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
       float: left;
       height: 40px;
-    }
 
-  a {
-    padding: 10px 20px;
-    float: left;
-    clear: both;
-    height: 20px;
-    line-height: 20px;
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
 
-    &:link, &:visited {
-      color: $footer-color;
-      text-transform: lowercase;
-    }
+        &:link, &:visited {
+          color: $footer-color;
+          text-transform: lowercase;
+        }
 
-    &:hover, &:active, .isActive {
-      color: $black;
-      text-decoration: none;
-      text-transform: uppercase;
-      margin-right: 8px;
+        &:hover, &:active, &.isActive {
+          color: $black;
+          text-decoration: none;
+          text-transform: capitalize;
+        }
+      }
     }
   }
 }
