@@ -1,0 +1,10 @@
+---
+layout: post
+title: KnockoutJS Greenfield Experiment
+project_title: Greenfield KnockoutJS Template
+project_url: https://github.com/code-chimp/greenfield-knockoutjs-template
+---
+
+p. um - didn't mean to push this branch, obviously
+
+h2. oops

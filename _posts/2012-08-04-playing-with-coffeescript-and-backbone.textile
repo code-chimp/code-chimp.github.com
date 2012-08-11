@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Playing with CoffeeScript and Backbone
+project_title: GreenBack Express
+project_url: https://github.com/code-chimp/greenback-express
 ---
 
 p. Daily use of TFS has enfeebled my mind.

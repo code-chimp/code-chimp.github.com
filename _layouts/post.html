@@ -2,11 +2,14 @@
 layout: default
 ---
 <article>
-  <header>
-    <h2>{{ page.title }}</h2>
-    <time datetime="{{ page.date|date_to_xmlschema }}">{{ page.date|date: "%B %d, %Y}}</time>
+  <header class="clearfix">
+    <h1>{{ page.title }}</h1>
+    <time datetime="{{ page.date|date: "%Y-%m-%d" }}">{{ page.date|date: "%B %d, %Y"}}</time>
   </header>
   <section class="content">
     {{ content }}
   </section>
+  <footer>
+    <a href="{{ page.project_url }}" title="{{ page.project_title }} project on Github">go to project &#187;</a>
+  </footer>
 </article>

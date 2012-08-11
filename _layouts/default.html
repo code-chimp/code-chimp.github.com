@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>{{ page.title }} :: code-chimp</title>
-  <meta name="description" content="code-chimp is just my little place to note random ephemera that interests me">
+  <meta name="description" content="{% if page.description %}{{page.description}}{% else %}code-chimp is just my little place to note random ephemera that interests me{% endif %}">
   <meta name="keywords" content="linux,.net,c#,mono,vb.net,aspx,asp.net,tutorials,how-to,python,gis,ruby,windows,ubuntu">
   <meta name="author" content="Tim Goshinski">
   <meta name="viewport" content="width=device-width">
@@ -42,7 +42,7 @@
   </section>
 
   <footer role="contentinfo" class="clearfix">
-    &#169; 2009 &#8211; {{ site.time | date: '%Y' }}  Tim Goshinski<br />
+    &#169; 2009 &#8211; {{ site.time|date: '%Y' }}  Tim Goshinski<br />
     powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> on <a href="https://github.com/">GitHub</a>
 
     <div id="altSites" title="alternate versions of my website">
