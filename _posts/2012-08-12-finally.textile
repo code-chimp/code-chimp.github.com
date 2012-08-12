@@ -5,6 +5,6 @@ project_title: Repository Front Page
 project_url: https://github.com/code-chimp/code-chimp.github.com
 ---
 
-p. um - didn't mean to push this branch, obviously
+p. I have finally chiseled out enough time to start documenting all of the random personal projects I find myself playing with.
 
-h2. oops
+p. As

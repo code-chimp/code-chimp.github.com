@@ -9,7 +9,9 @@ layout: default
   <section class="content">
     {{ content }}
   </section>
+  {% if page.project_url %}
   <footer>
     <a href="{{ page.project_url }}" title="{{ page.project_title }} project on Github">go to project &#187;</a>
   </footer>
+  {% endif %}
 </article>
