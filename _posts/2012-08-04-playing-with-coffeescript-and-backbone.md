@@ -3,6 +3,7 @@ layout: post
 title: Playing with CoffeeScript and Backbone
 published: false
 postdate: 2012-08-04
+summary:
 categories: [project]
 tags: [template, javascript, coffeescript, nodejs, express]
 project_title: GreenBack Express

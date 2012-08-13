@@ -1,3 +1,4 @@
+@charset "utf-8";
 /*
  * HTML5 ★ Boilerplate
  *
@@ -190,6 +191,17 @@ q, blockquote {
         size: calc-ems(18px, 16px);
         weight: bolder;
       }
+    }
+  }
+
+  .content {
+    h2 {
+      font-size: calc-ems(17px, 16px);
+      color: $my-green;
+    }
+    h3 {
+      font-size: calc-ems(16px, 16px);
+      color: $my-blue;
     }
   }
 

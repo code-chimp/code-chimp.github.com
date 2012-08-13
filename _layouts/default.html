@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{ page.title }}{% if page.title %} :: {% endif %}code-chimp</title>
+  <title>{% if page.title and page.title != "Home" %}{{ page.title }} :: {% endif %}code-chimp</title>
   <meta name="description" content="{% if page.description %}{{page.description}}{% else %}code-chimp is just my little place to note random ephemera that interests me{% endif %}">
   <meta name="keywords" content="linux,.net,c#,mono,vb.net,aspx,asp.net,tutorials,how-to,python,gis,ruby,windows,ubuntu">
   <meta name="author" content="Tim Goshinski">
@@ -29,7 +29,7 @@
       <h2 class="visuallyhidden">Site Navigation</h2>
       <a class="visuallyhidden" href="#endNav" accesskey="2">Skip over site navigation links</a>
       <ul class="clearfix">
-        <li><a href="/" title='Home' accesskey="1"{% if page.title == "Repository" %} class="isActive"{% endif %}>Home</a></li>
+        <li><a href="/" title='Home' accesskey="1"{% if page.title == "Home" %} class="isActive"{% endif %}>Home</a></li>
         <li><a href="/archives.html" title="Archives"{% if page.title == "Archives" %} class="isActive"{% endif %}>Archives</a></li>
         <li><a href="/about.html" title="About"{% if page.title == "About Me" %} class="isActive"{% endif %}>About</a></li>
         <li><a href="/contact.html" title="Contact Me"{% if page.title == "Contact Me" %} class="isActive"{% endif %}>Contact</a></li>
