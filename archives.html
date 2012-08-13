@@ -4,6 +4,7 @@ title: Archives
 description: Past musings of the site admin...
 ---
 <h1>Archives</h1>
+{% if site.posts.size > 3 %}
 <ul>
     {% for for post in site.posts offset:3 %}
     <li>
@@ -11,3 +12,6 @@ description: Past musings of the site admin...
     </li>
     {% endfor %}
 </ul>
+{% else %}
+<p>The cupboard is bare.</p>
+{% endif %}
