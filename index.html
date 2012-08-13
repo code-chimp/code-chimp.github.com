@@ -8,7 +8,7 @@ layout: default
     <time datetime="{{ post.date|date: "%Y-%m-%d" }}">{{ post.date | date_to_string }}</time>
   </header>
   <section class="content">
-    {{ post.content | truncatehtml:10 }}
+    {{ post.content | truncatewords:15 }}
   </section>
   <div class="more"><a href="{{ post.url }}">full article &#187;</a></div>
 </article>
