@@ -1,4 +1,4 @@
-# Repository Front Page
+# [Repository Front Page][7]
 
 The [Jekyll][1] powered front page to my [Github][2] repository. Just for fun I
 threw in a [Cake][5] buildfile to use during development.
@@ -23,3 +23,4 @@ threw in a [Cake][5] buildfile to use during development.
  [4]: http://sass-lang.com/ (Syntactically Awesome Stylesheets)
  [5]: https://github.com/jashkenas/coffee-script/wiki/%5BHowTo%5D-Compiling-and-Setting-Up-Build-Tools (Compiling and Setting Up Build Tools)
  [6]: http://creativecommons.org/publicdomain/zero/1.0/legalcode (creative commons 1.0 Universal)
+ [7]: http://code-chimp.github.com/ (front page)
