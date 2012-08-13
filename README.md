@@ -11,7 +11,7 @@ threw in a [Cake][5] buildfile to use during development.
 
 # Plugin(s)
 
-* [TruncateHTML](https://github.com/MattHall/truncatehtml) - syntax highlighting
+* <del title="apparently Github pages doesn't play well with Jekyll plugins">[TruncateHTML](https://github.com/MattHall/truncatehtml) - syntax highlighting</del>
 
 ## License
 
