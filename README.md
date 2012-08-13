@@ -9,12 +9,17 @@ threw in a [Cake][5] buildfile to use during development.
 * [Sass][4] - SCSS syntax (just my personal preference)
 * [Jekyll][2] - Ruby static site generator
 
+# Plugin(s)
+
+* [TruncateHTML](https://github.com/MattHall/truncatehtml) - syntax highlighting
+
 ## License
 
-[CC0][9] public domain
+[CC0][6] public domain
 
  [1]: https://github.com/mojombo/jekyll (Jekyll blog-aware static site generator)
  [2]: https://github.com/ (Social collaboration through an online DVCS)
  [3]: http://html5boilerplate.com/ (HTML5 Boilerplate Homepage)
  [4]: http://sass-lang.com/ (Syntactically Awesome Stylesheets)
  [5]: https://github.com/jashkenas/coffee-script/wiki/%5BHowTo%5D-Compiling-and-Setting-Up-Build-Tools (Compiling and Setting Up Build Tools)
+ [6]: http://creativecommons.org/publicdomain/zero/1.0/legalcode (creative commons 1.0 Universal)
