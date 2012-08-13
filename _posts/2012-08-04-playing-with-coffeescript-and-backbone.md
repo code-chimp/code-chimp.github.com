@@ -32,7 +32,7 @@ promising <span title="Minshara - yeah I'm that much of a dork">Class M</span>
 planet seemed to be [express][8]. The decision to use [Backbone.JS][4] for the
 front end logic was entirely subjective &#150; to wit a plethora of gentlefolk
 on [Proggit][9] had most regally dubbed it "hella-cool". As of this writing I
-am still fleshing out my first "real-world" [MVP][2], so I am still fleshing out
+am still hammering out my first "real-world" [MVP][2], so I am still fleshing out
 this template with everything new I discover along the way.
 
 Feel free to adapt the following project towards your own goals of world
