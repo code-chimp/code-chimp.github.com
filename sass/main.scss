@@ -27,14 +27,14 @@ $grey-50: rgba(127,127,127,1);
 // SASS functions and mixins for this project
 @import "my_funcs";
 
-// HTML5 display definitions for decrepit browsers
-@import "html5";
+// Normalization tricks
+@import "normalize";
+
+// h5bp additional tweaks to 'normalize'
+@import "h5bp_add";
 
 // Any embedded fonts needed for this project
 @import "embedded_fonts";
-
-// Normalization tricks
-@import "base";
 
 //http://thesassway.com/intermediate/responsive-web-design-part-1
 //http://www.dandenney.com/posts/front-end-dev/a-sass-noob-using-math-for-flexible-widths

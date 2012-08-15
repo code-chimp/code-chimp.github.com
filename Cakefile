@@ -13,7 +13,7 @@ catch error
 # define some actions
 sassWatch = ->
     console.log '\t...watching .scss files'
-    p = exec "sass -l -g -t expanded --watch sass:css"
+    p = exec "sass -l -t expanded --watch sass:css"
     p.stderr.on 'data', (data) -> process.stderr.write data.red
     p.stdout.on 'data', (data) ->
         if /overwrite/.test data
@@ -23,9 +23,29 @@ sassWatch = ->
         else
             process.stdout.write data.red
 
+sassBuildDebug = ->
+    console.log '\t...building/compressing .scss files'
+    p = exec "sass -l -g -t expanded --update sass:css"
+    p.stderr.on 'data', (data) -> process.stderr.write data.red
+    p.stdout.on 'data', (data) ->
+        if /overwrite/.test data
+            process.stdout.write data.green
+        else
+            process.stderr.write data.red
+
+sassBuildTight = ->
+    console.log '\t...building/compressing .scss files'
+    p = exec "sass -f -t comressed --update sass:css"
+    p.stderr.on 'data', (data) -> process.stderr.write data.red
+    p.stdout.on 'data', (data) ->
+        if /overwrite/.test data
+            process.stdout.write data.green
+        else
+            process.stderr.write data.red
+
 sassBuild = ->
     console.log '\t...building/compressing .scss files'
-    p = exec "sass -f -t compressed --update sass:css"
+    p = exec "sass -f --update sass:css"
     p.stderr.on 'data', (data) -> process.stderr.write data.red
     p.stdout.on 'data', (data) ->
         if /overwrite/.test data
@@ -57,10 +77,17 @@ coffeeBuild = ->
         fs.rmdirSync '-p' if fs.existsSync '-p'
 
 # define the tasks
+task 'build:debug', 'Build w/ as much debug info as we can get', ->
+    console.log 'Building debug'.yellow
+
+    coffeeBuild()
+    sassBuildDebug()
+
 task 'build:prod', 'Build production-ready(ish) application', ->
     console.log 'Building production'.yellow
 
     coffeeBuild()
+    # sassBuildTight()
     sassBuild()
 
 task 'watch', 'Automatically recompile CoffeeScript and Sass files', ->
