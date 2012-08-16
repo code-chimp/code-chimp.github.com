@@ -451,6 +451,10 @@ q, blockquote {
       float: right;
       font-size: 1.125em;
       font-weight: bolder; }
+  .post footer {
+    text-align: center; }
+    .post footer a {
+      font-size: smaller; }
   .post .content h2 {
     font-size: 1.063em;
     color: #018752; }

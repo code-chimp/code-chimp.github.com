@@ -194,6 +194,11 @@ q, blockquote {
     }
   }
 
+  footer {
+    text-align: center;
+    a { font-size: smaller; }
+  }
+
   .content {
     h2 {
       font-size: calc-ems(17px, 16px);
