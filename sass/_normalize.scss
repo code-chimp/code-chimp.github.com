@@ -1,4 +1,4 @@
-/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v1.0.1 | MIT License | git.io/normalize */
 
 /*
 * Copyright (c) Nicolas Gallagher and Jonathan Neal
@@ -166,7 +166,7 @@ q {
   }
 }
 
-small { font-size: 75%; }
+small { font-size: 80%; }
 
 // Prevents `sub` and `sup` affecting `line-height` in all browsers.
 sub, sup {
@@ -292,7 +292,7 @@ input[type="search"] {
 
   // Removes inner padding and search cancel button in Safari 5 and Chrome
   // on OS X.
-  &::-webkit-search-decoration, &::-webkit-search-cancel-button {
+  &::-webkit-search-cancel-button, &::-webkit-search-decoration {
     -webkit-appearance: none;
   }
 }
@@ -317,4 +317,4 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* end normalize  v1.0.0 */
+/* end normalize  v1.0.1 */

@@ -319,11 +319,11 @@ article {
 
   footer {
     margin-top: 20px;
-    #social, #resumes { width: calc-width-pct(150px, 720px); }
-    #social { float: left; }
-    #resumes { float: right; }
   }
 }
+#social, #resumes { width: calc-width-pct(150px, 720px); }
+#social { float: left; }
+#resumes { float: right; }
 /* End Primary Styles */
 
 // Any adjustments needed for mobile or other browser types

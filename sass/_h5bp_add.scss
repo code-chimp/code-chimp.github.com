@@ -1,16 +1,11 @@
 /** h5bp tweaks **/
+// Base styles: opinionated defaults
+
 html, button, input, select, textarea { color: #222; }
 
 body {
   font-size: 1em;
   line-height: 1.4;
-}
-
-a {
-  color: #00e;
-
-  &:visited { color: #551a8b; }
-  &:hover { color: #06e; }
 }
 
 // Remove text-shadow in selection highlight: h5bp.com/i
@@ -40,13 +35,14 @@ hr {
 img { vertical-align: middle; }
 
 // Remove default fieldset styles.
-/*
 fieldset {
   border: 0;
   margin: 0;
   padding: 0;
 }
-*/
+
+// allow only vertical resizing of textareas
+textarea { resize: vertical; }
 
 /** Chrome Frame Prompt **/
 .chromeframe {

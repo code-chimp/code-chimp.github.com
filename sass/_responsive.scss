@@ -11,4 +11,46 @@
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+  /* Style adjustments for high resolution devices */
+}
+
+/* Inlined to avoid required HTTP connection */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important; // Black prints faster
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a {
+    &, &:visited { text-decoration: underline; }
+    &[href]:after { content: " (" attr(href) ")"; }
+  }
+
+  abbr[title]:after { content: " (" attr(title) ")"; }
+
+  // Don't show links for images, or javascript/internal links
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead { display: table-header-group; }
+
+  tr, img { page-break-inside: avoid; }
+
+  img { max-width: 100% !important; }
+
+  @page { margin: 0.5cm; }
+
+  p, h2, h3 { orphans: 3; widows: 3; }
+
+  h2, h3{ page-break-after: avoid; }
+}
 /** end responsive design **/
